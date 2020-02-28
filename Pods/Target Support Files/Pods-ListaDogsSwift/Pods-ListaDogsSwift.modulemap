@@ -1,0 +1,6 @@
+framework module Pods_ListaDogsSwift {
+  umbrella header "Pods-ListaDogsSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
