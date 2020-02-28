@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MVO-VH-YUI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MVO-VH-YUI">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -35,11 +35,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="MVO-VH-YUI" firstAttribute="leading" secondItem="8dn-S7-ztm" secondAttribute="leading" id="S16-ZS-wk7"/>
+                            <constraint firstItem="MVO-VH-YUI" firstAttribute="top" secondItem="8dn-S7-ztm" secondAttribute="top" id="c2l-93-Haj"/>
                             <constraint firstItem="MVO-VH-YUI" firstAttribute="trailing" secondItem="8dn-S7-ztm" secondAttribute="trailing" id="sfl-c7-M7c"/>
+                            <constraint firstItem="MVO-VH-YUI" firstAttribute="bottom" secondItem="8dn-S7-ztm" secondAttribute="bottom" id="ze1-GC-5qT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8dn-S7-ztm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-adicionar-aos-favoritos-64" landscapeImage="icons8-adicionar-aos-favoritos-64" id="n4d-Ou-fTm">
+                    <tabBarItem key="tabBarItem" title="" image="icons8-adicionar-aos-favoritos-64" landscapeImage="icons8-adicionar-aos-favoritos-64" selectedImage="icons8-adicionar-aos-favoritos-64" id="n4d-Ou-fTm">
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="1"/>
                     </tabBarItem>
                 </viewController>
@@ -55,7 +57,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D45-WZ-5Wp">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D45-WZ-5Wp">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -73,11 +75,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="D45-WZ-5Wp" firstAttribute="trailing" secondItem="MH2-mn-yqV" secondAttribute="trailing" id="Nfq-4y-faI"/>
+                            <constraint firstItem="D45-WZ-5Wp" firstAttribute="bottom" secondItem="MH2-mn-yqV" secondAttribute="bottom" id="QJQ-6L-wJx"/>
                             <constraint firstItem="D45-WZ-5Wp" firstAttribute="leading" secondItem="MH2-mn-yqV" secondAttribute="leading" id="XP7-bX-262"/>
+                            <constraint firstItem="D45-WZ-5Wp" firstAttribute="top" secondItem="MH2-mn-yqV" secondAttribute="top" id="ilg-sZ-j1W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MH2-mn-yqV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-hachiko-48" id="aXV-HF-TYQ"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-hachiko-48" landscapeImage="icons8-hachiko-48" selectedImage="icons8-hachiko-48" id="aXV-HF-TYQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4o-uW-DhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
