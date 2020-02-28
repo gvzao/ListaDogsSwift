@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABAB96692409315F00954232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB96682409315F00954232 /* AppDelegate.swift */; };
+		ABAB966B2409315F00954232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB966A2409315F00954232 /* ViewController.swift */; };
+		ABAB966E2409315F00954232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAB966C2409315F00954232 /* Main.storyboard */; };
+		ABAB96702409316400954232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAB966F2409316400954232 /* Assets.xcassets */; };
+		ABAB96732409316400954232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAB96712409316400954232 /* LaunchScreen.storyboard */; };
+		ABAB967E2409316400954232 /* ListaDogsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB967D2409316400954232 /* ListaDogsSwiftTests.swift */; };
+		ABAB96892409316400954232 /* ListaDogsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB96882409316400954232 /* ListaDogsSwiftUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABAB967A2409316400954232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABAB965D2409315F00954232 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABAB96642409315F00954232;
+			remoteInfo = ListaDogsSwift;
+		};
+		ABAB96852409316400954232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABAB965D2409315F00954232 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABAB96642409315F00954232;
+			remoteInfo = ListaDogsSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ABAB96652409315F00954232 /* ListaDogsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListaDogsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABAB96682409315F00954232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ABAB966A2409315F00954232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ABAB966D2409315F00954232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ABAB966F2409316400954232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABAB96722409316400954232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ABAB96742409316400954232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABAB96792409316400954232 /* ListaDogsSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListaDogsSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABAB967D2409316400954232 /* ListaDogsSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDogsSwiftTests.swift; sourceTree = "<group>"; };
+		ABAB967F2409316400954232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABAB96842409316400954232 /* ListaDogsSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListaDogsSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABAB96882409316400954232 /* ListaDogsSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDogsSwiftUITests.swift; sourceTree = "<group>"; };
+		ABAB968A2409316400954232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABAB96622409315F00954232 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABAB96762409316400954232 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABAB96812409316400954232 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABAB965C2409315F00954232 = {
+			isa = PBXGroup;
+			children = (
+				ABAB96672409315F00954232 /* ListaDogsSwift */,
+				ABAB967C2409316400954232 /* ListaDogsSwiftTests */,
+				ABAB96872409316400954232 /* ListaDogsSwiftUITests */,
+				ABAB96662409315F00954232 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABAB96662409315F00954232 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABAB96652409315F00954232 /* ListaDogsSwift.app */,
+				ABAB96792409316400954232 /* ListaDogsSwiftTests.xctest */,
+				ABAB96842409316400954232 /* ListaDogsSwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABAB96672409315F00954232 /* ListaDogsSwift */ = {
+			isa = PBXGroup;
+			children = (
+				ABAB96682409315F00954232 /* AppDelegate.swift */,
+				ABAB966A2409315F00954232 /* ViewController.swift */,
+				ABAB966C2409315F00954232 /* Main.storyboard */,
+				ABAB966F2409316400954232 /* Assets.xcassets */,
+				ABAB96712409316400954232 /* LaunchScreen.storyboard */,
+				ABAB96742409316400954232 /* Info.plist */,
+			);
+			path = ListaDogsSwift;
+			sourceTree = "<group>";
+		};
+		ABAB967C2409316400954232 /* ListaDogsSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABAB967D2409316400954232 /* ListaDogsSwiftTests.swift */,
+				ABAB967F2409316400954232 /* Info.plist */,
+			);
+			path = ListaDogsSwiftTests;
+			sourceTree = "<group>";
+		};
+		ABAB96872409316400954232 /* ListaDogsSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ABAB96882409316400954232 /* ListaDogsSwiftUITests.swift */,
+				ABAB968A2409316400954232 /* Info.plist */,
+			);
+			path = ListaDogsSwiftUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABAB96642409315F00954232 /* ListaDogsSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABAB968D2409316400954232 /* Build configuration list for PBXNativeTarget "ListaDogsSwift" */;
+			buildPhases = (
+				ABAB96612409315F00954232 /* Sources */,
+				ABAB96622409315F00954232 /* Frameworks */,
+				ABAB96632409315F00954232 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ListaDogsSwift;
+			productName = ListaDogsSwift;
+			productReference = ABAB96652409315F00954232 /* ListaDogsSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABAB96782409316400954232 /* ListaDogsSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABAB96902409316400954232 /* Build configuration list for PBXNativeTarget "ListaDogsSwiftTests" */;
+			buildPhases = (
+				ABAB96752409316400954232 /* Sources */,
+				ABAB96762409316400954232 /* Frameworks */,
+				ABAB96772409316400954232 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABAB967B2409316400954232 /* PBXTargetDependency */,
+			);
+			name = ListaDogsSwiftTests;
+			productName = ListaDogsSwiftTests;
+			productReference = ABAB96792409316400954232 /* ListaDogsSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ABAB96832409316400954232 /* ListaDogsSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABAB96932409316400954232 /* Build configuration list for PBXNativeTarget "ListaDogsSwiftUITests" */;
+			buildPhases = (
+				ABAB96802409316400954232 /* Sources */,
+				ABAB96812409316400954232 /* Frameworks */,
+				ABAB96822409316400954232 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABAB96862409316400954232 /* PBXTargetDependency */,
+			);
+			name = ListaDogsSwiftUITests;
+			productName = ListaDogsSwiftUITests;
+			productReference = ABAB96842409316400954232 /* ListaDogsSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABAB965D2409315F00954232 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = hbsoftware.ios;
+				TargetAttributes = {
+					ABAB96642409315F00954232 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					ABAB96782409316400954232 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = ABAB96642409315F00954232;
+					};
+					ABAB96832409316400954232 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = ABAB96642409315F00954232;
+					};
+				};
+			};
+			buildConfigurationList = ABAB96602409315F00954232 /* Build configuration list for PBXProject "ListaDogsSwift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABAB965C2409315F00954232;
+			productRefGroup = ABAB96662409315F00954232 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABAB96642409315F00954232 /* ListaDogsSwift */,
+				ABAB96782409316400954232 /* ListaDogsSwiftTests */,
+				ABAB96832409316400954232 /* ListaDogsSwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABAB96632409315F00954232 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABAB96732409316400954232 /* LaunchScreen.storyboard in Resources */,
+				ABAB96702409316400954232 /* Assets.xcassets in Resources */,
+				ABAB966E2409315F00954232 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABAB96772409316400954232 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABAB96822409316400954232 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABAB96612409315F00954232 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABAB966B2409315F00954232 /* ViewController.swift in Sources */,
+				ABAB96692409315F00954232 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABAB96752409316400954232 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABAB967E2409316400954232 /* ListaDogsSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABAB96802409316400954232 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABAB96892409316400954232 /* ListaDogsSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABAB967B2409316400954232 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABAB96642409315F00954232 /* ListaDogsSwift */;
+			targetProxy = ABAB967A2409316400954232 /* PBXContainerItemProxy */;
+		};
+		ABAB96862409316400954232 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABAB96642409315F00954232 /* ListaDogsSwift */;
+			targetProxy = ABAB96852409316400954232 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ABAB966C2409315F00954232 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABAB966D2409315F00954232 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ABAB96712409316400954232 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABAB96722409316400954232 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABAB968B2409316400954232 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ABAB968C2409316400954232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABAB968E2409316400954232 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ListaDogsSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.ListaDogsSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABAB968F2409316400954232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ListaDogsSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.ListaDogsSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ABAB96912409316400954232 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ListaDogsSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.ListaDogsSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ListaDogsSwift.app/ListaDogsSwift";
+			};
+			name = Debug;
+		};
+		ABAB96922409316400954232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ListaDogsSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.ListaDogsSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ListaDogsSwift.app/ListaDogsSwift";
+			};
+			name = Release;
+		};
+		ABAB96942409316400954232 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ListaDogsSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.ListaDogsSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ListaDogsSwift;
+			};
+			name = Debug;
+		};
+		ABAB96952409316400954232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ListaDogsSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.ListaDogsSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ListaDogsSwift;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABAB96602409315F00954232 /* Build configuration list for PBXProject "ListaDogsSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABAB968B2409316400954232 /* Debug */,
+				ABAB968C2409316400954232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABAB968D2409316400954232 /* Build configuration list for PBXNativeTarget "ListaDogsSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABAB968E2409316400954232 /* Debug */,
+				ABAB968F2409316400954232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABAB96902409316400954232 /* Build configuration list for PBXNativeTarget "ListaDogsSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABAB96912409316400954232 /* Debug */,
+				ABAB96922409316400954232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABAB96932409316400954232 /* Build configuration list for PBXNativeTarget "ListaDogsSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABAB96942409316400954232 /* Debug */,
+				ABAB96952409316400954232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABAB965D2409315F00954232 /* Project object */;
+}
