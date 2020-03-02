@@ -26,13 +26,34 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate {
         Alamofire.request("https://dog.ceo/api/breeds/list/all")
             .responseJSON { (response) in
                 if response.result.isSuccess {
-                    guard let data = response.result.value as? [String: Any] else { return }
-                    guard let json = data ["data"] as? [String: Any] else { return }
-                    print(json)
+                    guard let data = response.result.value as? [String: Any] else {
+                        print("Deu merda no primeiro guard")
+                        return
+                    }
+                    guard let json = data["message"] as? [String: Any] else {
+                        print("Deu merda no segundo guard")
+                        return }
+                    
+                    self.arrayToDogList(array: json)
+                    
                 }
                 else{
                     print("there was an error")
                 }
+        }
+    }
+    
+    func arrayToDogList(array: [String: Any]) {
+        for (key, subracas) in array {
+            print(key)
+            
+            guard let subracasArray = subracas as? [String] else {
+                continue
+            }
+            
+            for subraca in subracasArray {
+                print("  *  \(subraca)")
+            }
         }
     }
 
