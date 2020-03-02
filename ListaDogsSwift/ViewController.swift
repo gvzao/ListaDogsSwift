@@ -7,8 +7,16 @@
 //
 
 import UIKit
+import Alamofire
 
-class ViewController: UIViewController {
+
+
+class ViewController: UIViewController, UIImagePickerControllerDelegate {
+    
+    @IBOutlet weak var tableViewRaca: UITableView!
+    @IBOutlet weak var Image: UIImageView!
+   
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

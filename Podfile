@@ -1,4 +1,5 @@
 # Uncomment the next line to define a global platform for your project
+
 # platform :ios, '9.0'
 
 target 'ListaDogsSwift' do
@@ -6,6 +7,7 @@ target 'ListaDogsSwift' do
   use_frameworks!
 
   # Pods for ListaDogsSwift
+   pod 'Alamofire', '4.7'
 
   target 'ListaDogsSwiftTests' do
     inherit! :search_paths
