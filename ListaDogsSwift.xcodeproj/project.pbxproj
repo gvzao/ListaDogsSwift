@@ -16,6 +16,9 @@
 		ABAB967E2409316400954232 /* ListaDogsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB967D2409316400954232 /* ListaDogsSwiftTests.swift */; };
 		ABAB96892409316400954232 /* ListaDogsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB96882409316400954232 /* ListaDogsSwiftUITests.swift */; };
 		ABAB969724093FA800954232 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = ABAB969624093FA800954232 /* Podfile */; };
+		ABFDA44D240D3E3300432DE9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFDA44C240D3E3300432DE9 /* TableViewCell.swift */; };
+		ABFDA451240D4C0B00432DE9 /* FavoritoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFDA450240D4C0B00432DE9 /* FavoritoTableViewCell.swift */; };
+		ABFDA455240D505400432DE9 /* FavoritoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFDA454240D505400432DE9 /* FavoritoTableViewController.swift */; };
 		CC88394A165390963E429096 /* Pods_ListaDogsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BE4100FD9784147335F466 /* Pods_ListaDogsSwift.framework */; };
 		F402D82FA354F37D46172D54 /* Pods_ListaDogsSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6A80FA9D7B36214EE60F83 /* Pods_ListaDogsSwiftTests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +60,9 @@
 		ABAB96882409316400954232 /* ListaDogsSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDogsSwiftUITests.swift; sourceTree = "<group>"; };
 		ABAB968A2409316400954232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABAB969624093FA800954232 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		ABFDA44C240D3E3300432DE9 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		ABFDA450240D4C0B00432DE9 /* FavoritoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritoTableViewCell.swift; sourceTree = "<group>"; };
+		ABFDA454240D505400432DE9 /* FavoritoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritoTableViewController.swift; sourceTree = "<group>"; };
 		C591F2B6417AA432520C6E91 /* Pods-ListaDogsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListaDogsSwift.release.xcconfig"; path = "Target Support Files/Pods-ListaDogsSwift/Pods-ListaDogsSwift.release.xcconfig"; sourceTree = "<group>"; };
 		D9A3DD6FA85D82A53D5605E0 /* Pods-ListaDogsSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListaDogsSwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-ListaDogsSwiftTests/Pods-ListaDogsSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E065F772EC425A53E3682B04 /* Pods-ListaDogsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListaDogsSwift.debug.xcconfig"; path = "Target Support Files/Pods-ListaDogsSwift/Pods-ListaDogsSwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,8 +150,11 @@
 				ABAB966A2409315F00954232 /* ViewController.swift */,
 				ABAB966C2409315F00954232 /* Main.storyboard */,
 				ABAB966F2409316400954232 /* Assets.xcassets */,
+				ABFDA44C240D3E3300432DE9 /* TableViewCell.swift */,
 				ABAB96712409316400954232 /* LaunchScreen.storyboard */,
 				ABAB96742409316400954232 /* Info.plist */,
+				ABFDA450240D4C0B00432DE9 /* FavoritoTableViewCell.swift */,
+				ABFDA454240D505400432DE9 /* FavoritoTableViewController.swift */,
 			);
 			path = ListaDogsSwift;
 			sourceTree = "<group>";
@@ -166,20 +175,6 @@
 				ABAB968A2409316400954232 /* Info.plist */,
 			);
 			path = ListaDogsSwiftUITests;
-			sourceTree = "<group>";
-		};
-		B0B39A70FC94267D48080CAB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A4C36A6D736404B3DC4B7E05 /* Pods-ListaDogsSwift.debug.xcconfig */,
-				9D4FE3E4C925FA12452530C0 /* Pods-ListaDogsSwift.release.xcconfig */,
-				F6F5AB1EB952752EA59904CB /* Pods-ListaDogsSwift-ListaDogsSwiftUITests.debug.xcconfig */,
-				79AEB713D0A446218744697E /* Pods-ListaDogsSwift-ListaDogsSwiftUITests.release.xcconfig */,
-				251302D9CCD5A6B3604D843A /* Pods-ListaDogsSwiftTests.debug.xcconfig */,
-				E95CCE59FADBC5C7CA1970D3 /* Pods-ListaDogsSwiftTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,7 +417,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABFDA451240D4C0B00432DE9 /* FavoritoTableViewCell.swift in Sources */,
 				ABAB966B2409315F00954232 /* ViewController.swift in Sources */,
+				ABFDA44D240D3E3300432DE9 /* TableViewCell.swift in Sources */,
+				ABFDA455240D505400432DE9 /* FavoritoTableViewController.swift in Sources */,
 				ABAB96692409315F00954232 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
