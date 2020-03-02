@@ -168,6 +168,20 @@
 			path = ListaDogsSwiftUITests;
 			sourceTree = "<group>";
 		};
+		B0B39A70FC94267D48080CAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4C36A6D736404B3DC4B7E05 /* Pods-ListaDogsSwift.debug.xcconfig */,
+				9D4FE3E4C925FA12452530C0 /* Pods-ListaDogsSwift.release.xcconfig */,
+				F6F5AB1EB952752EA59904CB /* Pods-ListaDogsSwift-ListaDogsSwiftUITests.debug.xcconfig */,
+				79AEB713D0A446218744697E /* Pods-ListaDogsSwift-ListaDogsSwiftUITests.release.xcconfig */,
+				251302D9CCD5A6B3604D843A /* Pods-ListaDogsSwiftTests.debug.xcconfig */,
+				E95CCE59FADBC5C7CA1970D3 /* Pods-ListaDogsSwiftTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */

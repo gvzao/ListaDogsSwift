@@ -10,7 +10,7 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="xFY-mJ-CkH">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ListaDogsSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
@@ -34,13 +34,73 @@
                         <outlet property="Image" destination="hlu-2r-Vaj" id="rFa-MZ-QBm"/>
                         <outlet property="tableViewRaca" destination="y76-iE-7nt" id="7fv-NP-3c5"/>
                     </connections>
+
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sxg-jd-338" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="131.78410794602701"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Rab-zy-SYc">
+            <objects>
+                <viewController id="uGh-IS-DIb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yp3-yX-FRP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D45-WZ-5Wp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QGD-6B-KYe">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QGD-6B-KYe" id="5Cq-8B-jHX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="D45-WZ-5Wp" firstAttribute="trailing" secondItem="MH2-mn-yqV" secondAttribute="trailing" id="Nfq-4y-faI"/>
+                            <constraint firstItem="D45-WZ-5Wp" firstAttribute="bottom" secondItem="MH2-mn-yqV" secondAttribute="bottom" id="QJQ-6L-wJx"/>
+                            <constraint firstItem="D45-WZ-5Wp" firstAttribute="leading" secondItem="MH2-mn-yqV" secondAttribute="leading" id="XP7-bX-262"/>
+                            <constraint firstItem="D45-WZ-5Wp" firstAttribute="top" secondItem="MH2-mn-yqV" secondAttribute="top" id="ilg-sZ-j1W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MH2-mn-yqV"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-hachiko-48" landscapeImage="icons8-hachiko-48" selectedImage="icons8-hachiko-48" id="aXV-HF-TYQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R4o-uW-DhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="WmU-tf-T0Q">
+            <objects>
+                <tabBarController id="mwL-Xm-Qcc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="41p-X7-AHl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uGh-IS-DIb" kind="relationship" relationship="viewControllers" id="ebQ-ll-34f"/>
+                        <segue destination="2jg-U9-mHz" kind="relationship" relationship="viewControllers" id="i4E-Ri-6XV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZvL-WB-APe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-326" y="134"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="icons8-adicionar-aos-favoritos-64" width="64" height="64"/>
+        <image name="icons8-hachiko-48" width="48" height="48"/>
         <image name="Image" width="275" height="183"/>
     </resources>
 </document>
