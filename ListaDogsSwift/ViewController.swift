@@ -14,6 +14,7 @@ import Alamofire
 class ViewController: UIViewController, UIImagePickerControllerDelegate {
     static let apiUrl = "https://dog.ceo/api/breeds/list/all"
     
+   
     @IBOutlet weak var tableViewRaca: UITableView!
     @IBOutlet weak var Image: UIImageView!
 
@@ -21,7 +22,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
+  
     func fetchData(){
         Alamofire.request("https://dog.ceo/api/breeds/list/all")
             .responseJSON { (response) in
@@ -56,6 +57,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate {
             }
         }
     }
-
 }
 
