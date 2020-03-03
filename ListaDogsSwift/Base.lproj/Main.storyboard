@@ -43,7 +43,10 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nX8-OE-cvX">
                                                     <rect key="frame" x="301" y="6" width="59" height="51"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="Icone favorito"/>
+                                                    <state key="normal" image="IconeFavorito"/>
+                                                    <connections>
+                                                        <action selector="btnFavorito:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lZ9-9T-wD2"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -123,7 +126,7 @@
                             <outlet property="delegate" destination="LRP-s5-4h5" id="FEY-Ej-jgL"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="icons8-adicionar-aos-favoritos-64" selectedImage="icons8-adicionar-aos-favoritos-64" id="hK3-LZ-6y2"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="iconeAdd" selectedImage="iconeAdd" id="hK3-LZ-6y2"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWu-gJ-v2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,10 +134,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icone favorito" width="384" height="384"/>
+        <image name="IconeFavorito" width="384" height="384"/>
         <image name="Image" width="275" height="183"/>
         <image name="Lista de cachorros" width="16" height="16"/>
-        <image name="icons8-adicionar-aos-favoritos-64" width="64" height="64"/>
+        <image name="iconeAdd" width="64" height="64"/>
         <image name="icons8-hachiko-48" width="48" height="48"/>
     </resources>
 </document>

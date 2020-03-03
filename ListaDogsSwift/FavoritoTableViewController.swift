@@ -25,14 +25,14 @@ class FavoritoTableViewController: UITableViewController {
         
         let cellIdentifier = "FavoritoTableViewCell"
         
-        //As? para que a celula não receba algo que nao tenha na tabelaBares.
+        //As? para que a celula não receba algo que nao tenha na tabelaFavoritos.
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FavoritoTableViewCell
         
         //Pegando a posição na tabela, para cetar as informações na celula de cada bar.
         //let dog = favorito[indexPath.row]
         
-       // cell?.NomeDog.text = raca.nome
-       // cell?.FtDog.image = raca.foto
+       //cell?.NomeDog.text = raca.nome
+       //cell?.FtDog.image = raca.foto
         
         return cell!
     }

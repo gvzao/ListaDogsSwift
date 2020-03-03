@@ -11,18 +11,44 @@ import Alamofire
 
 
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate {
+class ViewController: UITableViewController, UIImagePickerControllerDelegate, UITableViewDelegate, UITableViewDataSource {
     static let apiUrl = "https://dog.ceo/api/breeds/list/all"
     
    
+    @IBAction func btnFavorito(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected;
+        
+    }
     @IBOutlet weak var tableViewRaca: UITableView!
     @IBOutlet weak var Image: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        atualizaBtn();
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 1 //favorito.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cellIdentifier = "TableViewCell"
+        
+        //As? para que a celula não receba algo que nao tenha na tabelaFavoritos.
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FavoritoTableViewCell
+        
+        //Pegando a posição na tabela, para cetar as informações na celula de cada bar.
+        //let dog = favorito[indexPath.row]
+        
+        //cell?.NomeDog.text = raca.nome
+        //cell?.FtDog.image = raca.foto
+        
+        return cell!
     }
   
+    
     func fetchData(){
         Alamofire.request("https://dog.ceo/api/breeds/list/all")
             .responseJSON { (response) in
@@ -57,5 +83,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate {
             }
         }
     }
+    private func atualizaBtn() {
+        
+        let bundle = Bundle(for: type(of: self))
+        
+        let iconeAdd = UIImage(named: "iconeAdd", in: bundle, compatibleWith: self.traitCollection)
+        
+        let iconeFavorito = UIImage(named: "iconeFavorito", in: bundle, compatibleWith: self.traitCollection)
+        
+        let btnFav = UIButton()
+        
+        //Criando o botão a partir do que o usuario clicar
+        btnFav.setImage(iconeAdd, for: .normal)
+        btnFav.setImage(iconeFavorito, for: .selected)
+        
+        btnFav.addTarget(self, action: #selector(self.btnFavorito(_:)), for: .touchUpInside)
+        
+
+        
+    }
+    
+    
 }
 
