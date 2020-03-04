@@ -73,7 +73,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var data = [String]()
         
         for (key, subracas) in array {
-            data.append(key)
+            data.append(key);
             
             guard let subracasArray = subracas as? [String] else {
                 continue

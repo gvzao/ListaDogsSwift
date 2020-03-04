@@ -9,7 +9,9 @@
 import UIKit
 
 class FavoritoTableViewController: UITableViewController {
-
+    
+    var favoritos = [Breed]();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,16 +25,22 @@ class FavoritoTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellIdentifier = "FavoritoTableViewCell"
+        let cellIdentifier = "favID"
         
         //As? para que a celula não receba algo que nao tenha na tabelaBares.
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FavoritoTableViewCell
         
-        //Pegando a posição na tabela, para cetar as informações na celula de cada bar.
-        //let dog = favorito[indexPath.row]
         
-       // cell?.NomeDog.text = raca.nome
-       // cell?.FtDog.image = raca.foto
+        let dog = favoritos[indexPath.row]
+        
+        cell?.nome.text = dog.name
+        
+        if (dog.image == nil){
+            cell?.ftDog.image = dog.image
+       
+        }else{
+            print("Não tem imagem aqui")
+        }
         
         return cell!
     }
