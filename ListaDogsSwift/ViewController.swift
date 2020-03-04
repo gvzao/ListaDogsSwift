@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import SwiftyJSON
 import Alamofire
+import AlamofireImage
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -31,6 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         breedTableView.delegate = self
         
         fetchData()
+        requestImagem()
     }
     
     //MARK: API request methods
@@ -108,5 +111,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
+    func requestImagem(){
+        Alamofire.request("https://images.dog.ceo/breeds/waterdog-spanish/20180723_185559.jpg").responseImage {response in
+            if let image = response.result.value{
+                self.breedImageView.image = image
+            }
+    
+     }
+    }
+    
     
 }
