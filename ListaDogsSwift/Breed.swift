@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-class Breeds  {
+class Breed {
     
     var name: String
     var image: UIImage?
     var imageurl: String?
     var fromBreed: String?
-    var subBreeds: [Breeds]?
+    var subBreeds: [Breed]?
     var isFavorite: Bool = false
 
 
