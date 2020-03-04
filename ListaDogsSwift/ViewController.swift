@@ -9,21 +9,33 @@
 import UIKit
 import Alamofire
 
-
-
-class ViewController: UIViewController, UIImagePickerControllerDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    //MARK: Properties
+    
     static let apiUrl = "https://dog.ceo/api/breeds/list/all"
     
-   
-    @IBOutlet weak var tableViewRaca: UITableView!
-    @IBOutlet weak var Image: UIImageView!
+    @IBOutlet weak var breedImageView: UIImageView!
+    @IBOutlet weak var breedTableView: UITableView!
+    
+    
+    var breed: String?
+    var breeds = [String]()
+    
+    //MARK: Initializer
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        breedTableView.dataSource = self
+        breedTableView.delegate = self
+        
+        fetchData()
     }
+    
+    //MARK: API request methods
   
-    func fetchData(){
+    func fetchData() {
         Alamofire.request("https://dog.ceo/api/breeds/list/all")
             .responseJSON { (response) in
                 if response.result.isSuccess {
@@ -35,7 +47,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate {
                         print("Deu merda no segundo guard")
                         return }
                     
-                    self.arrayToDogList(array: json)
+                    self.loadDataToList(data: self.arrayToDogList(array: json))
                     
                 }
                 else{
@@ -44,18 +56,57 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate {
         }
     }
     
-    func arrayToDogList(array: [String: Any]) {
+    func loadDataToList(data: [String]?) {
+        if let listBreed = data {
+            breeds += listBreed
+            breedTableView.reloadData()
+        } else {
+            print("Couldn't load any data")
+            breeds = []
+        }
+    }
+    
+    func arrayToDogList(array: [String: Any]) -> [String] {
+        var data = [String]()
+        
         for (key, subracas) in array {
-            print(key)
+            data.append(key)
             
             guard let subracasArray = subracas as? [String] else {
                 continue
             }
             
             for subraca in subracasArray {
-                print("  *  \(subraca)")
+                
             }
         }
+        
+        return data
     }
+    
+    //MARK: TableView methods
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return breeds.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cellIdentifier = "dogCell"
+      
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TableViewCell else {
+            fatalError("The cell isn't a instance of TableViewCell")
+        }
+        
+        let nomeDog = breeds[indexPath.row]
+        
+        cell.nomeDog.text = nomeDog
+        
+        return cell
+    }
+    
 }
-
