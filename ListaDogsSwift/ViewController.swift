@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         breedTableView.delegate = self
         
         fetchData()
-        requestImagem()
+        requestImagem(url : "https://images.dog.ceo/breeds/lhasa/n02098413_6039.jpg")
     }
     
     //MARK: API request methods
@@ -111,14 +111,46 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
-    func requestImagem(){
-        Alamofire.request("https://images.dog.ceo/breeds/waterdog-spanish/20180723_185559.jpg").responseImage {response in
-            if let image = response.result.value{
-                self.breedImageView.image = image
-            }
     
-     }
+    func fetchImage(breed: Breed) {
+        var url: String;
+        
+        if(breed.fromBreed == nil) {
+            url = "https://dog.ceo/api/breed/\(breed.fromBreed!)/\(breed.name)/images/random"
+        } else {
+            url = "https://dog.ceo/api/breed/\(breed.name)/images/random"
+        }
+        
+        Alamofire.request(url)
+            .responseJSON { (response) in
+                if response.result.isSuccess {
+                    guard let data = response.result.value as? [String: Any] else {
+                        return
+                    }
+                    guard let imageUrl = data["message"] as? String else {
+                        return }
+                    
+                    self.requestImagem(url: imageUrl)
+                }
+                else{
+                    print("there was an error")
+                }
+        }
     }
     
+    func requestImagem(url : String){
+        print("chamou o metodo")
+        Alamofire.request(url).responseImage {response in
+            if let image = response.result.value{
+                print("chegou")
+                self.breedImageView.image = image
+                print("era para ter ido")
+            } else {
+                print("deu merda")
     
+     }
+    print("fim do metodo")
+    }
+    
+}
 }
