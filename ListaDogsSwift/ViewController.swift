@@ -21,8 +21,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var breedTableView: UITableView!
     
     
-    var breed: String?
-    var breeds = [String]()
+    var breed: Breed?
+    var breeds = [Breed]()
     
     //MARK: Initializer
 
@@ -42,24 +42,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         Alamofire.request("https://dog.ceo/api/breeds/list/all")
             .responseJSON { (response) in
                 if response.result.isSuccess {
-                    guard let data = response.result.value as? [String: Any] else {
-                        print("Deu merda no primeiro guard")
+                    guard let result = response.result.value as? [String: Any] else {
                         return
                     }
-                    guard let json = data["message"] as? [String: Any] else {
-                        print("Deu merda no segundo guard")
+                    guard let json = result["message"] as? [String: Any] else {
                         return }
                     
-                    self.loadDataToList(data: self.arrayToDogList(array: json))
+                    let data = self.parseDictionaryOfStringToArrayOfBreeds(dictionary: json)
                     
+                    self.loadDataToList(data: data)
                 }
                 else{
-                    print("there was an error")
+                    print("There was an error")
                 }
         }
     }
     
-    func loadDataToList(data: [String]?) {
+    func loadDataToList(data: [Breed]?) {
         if let listBreed = data {
             breeds += listBreed
             breedTableView.reloadData()
@@ -69,19 +68,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    func arrayToDogList(array: [String: Any]) -> [String] {
-        var data = [String]()
+    private func parseDictionaryOfStringToArrayOfBreeds(dictionary: [String: Any]) -> [Breed] {
+        var data = [Breed]()
         
-        for (key, subracas) in array {
-            data.append(key)
+        for (breedName, arrayOfSubBreeds) in dictionary {
+            let breed = Breed(name: breedName)!
             
-            guard let subracasArray = subracas as? [String] else {
+            guard let subBreedsArray = arrayOfSubBreeds as? [String] else {
+                data.append(breed)
                 continue
             }
             
-            for subraca in subracasArray {
+            var subBreeds = [Breed]()
+            
+            for subBreedName in subBreedsArray {
+                let subBreed = Breed(name: subBreedName)!
+                subBreed.fromBreed = breed
                 
+                subBreeds.append(subBreed)
             }
+            
+            breed.subBreeds = subBreeds
+            data.append(breed)
         }
         
         return data
@@ -105,9 +113,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             fatalError("The cell isn't a instance of TableViewCell")
         }
         
-        let nomeDog = breeds[indexPath.row]
+        let breed = breeds[indexPath.row]
         
-        cell.nomeDog.text = nomeDog
+        cell.nomeDog.text = breed.name
+        cell.btnFavorito.isSelected = breed.isFavorite
         
         return cell
     }
