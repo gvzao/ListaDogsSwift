@@ -11,7 +11,6 @@ import UIKit
 class FavoritoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var ftDog: UIImageView!
-    
     @IBOutlet weak var nome: UILabel!
     
     override func awakeFromNib() {
