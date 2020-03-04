@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6AD4EAB7B92ABDB829BB9036 /* Pods_ListaDogsSwift_ListaDogsSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D697B28CE899335DA0730E /* Pods_ListaDogsSwift_ListaDogsSwiftUITests.framework */; };
+		AB9E7691240FE8DA0065940F /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E7690240FE8DA0065940F /* Breed.swift */; };
 		ABAB96692409315F00954232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB96682409315F00954232 /* AppDelegate.swift */; };
 		ABAB966B2409315F00954232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB966A2409315F00954232 /* ViewController.swift */; };
 		ABAB966E2409315F00954232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAB966C2409315F00954232 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		72752580080E01F9C8828244 /* Pods-ListaDogsSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListaDogsSwiftTests.release.xcconfig"; path = "Target Support Files/Pods-ListaDogsSwiftTests/Pods-ListaDogsSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		76575AD43101E75DA801B28D /* Pods-ListaDogsSwift-ListaDogsSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListaDogsSwift-ListaDogsSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-ListaDogsSwift-ListaDogsSwiftUITests/Pods-ListaDogsSwift-ListaDogsSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8EFEA3FCDE14C87659B005AA /* Pods-ListaDogsSwift-ListaDogsSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListaDogsSwift-ListaDogsSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-ListaDogsSwift-ListaDogsSwiftUITests/Pods-ListaDogsSwift-ListaDogsSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB9E7690240FE8DA0065940F /* Breed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		ABAB96652409315F00954232 /* ListaDogsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListaDogsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAB96682409315F00954232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABAB966A2409315F00954232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		ABAB96672409315F00954232 /* ListaDogsSwift */ = {
 			isa = PBXGroup;
 			children = (
+				AB9E7690240FE8DA0065940F /* Breed.swift */,
 				ABAB96682409315F00954232 /* AppDelegate.swift */,
 				ABAB966A2409315F00954232 /* ViewController.swift */,
 				ABAB966C2409315F00954232 /* Main.storyboard */,
@@ -417,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB9E7691240FE8DA0065940F /* Breed.swift in Sources */,
 				ABFDA451240D4C0B00432DE9 /* FavoritoTableViewCell.swift in Sources */,
 				ABAB966B2409315F00954232 /* ViewController.swift in Sources */,
 				ABFDA44D240D3E3300432DE9 /* TableViewCell.swift in Sources */,
