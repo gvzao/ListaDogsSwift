@@ -14,7 +14,7 @@ class Breeds  {
     var name: String
     var image: UIImage?
     var imageurl: String?
-    var father: String?
+    var fromBreed: String?
     var subBreeds: [Breeds]?
     var isFavorite: Bool = false
 
@@ -23,7 +23,7 @@ struct PropertyKey {
     static let name = "name"
     static let image = "image"
     static let imageurl = "imageurl"
-    static let father = "father"
+    static let fromBreed = "fromBreed"
     static let subBreeds = "subBreeds"
     static let isFavorite = "isFavorite"
     }
