@@ -71,7 +71,7 @@ struct PropertyKey {
         self.name = name
     }
     
-    init?(name: String, image: UIImage?, imageUrl: String?, fromBreed: String?, subBreeds: [Breed]?, isFavorite: Bool) {
+    init?(name: String, image: UIImage?, imageUrl: String?, fromBreed: Breed?, subBreeds: [Breed]?, isFavorite: Bool) {
         
         self.name = name
         self.image = image

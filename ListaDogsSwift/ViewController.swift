@@ -40,6 +40,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         } else {
             fetchData()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let lastBreed = BreedDataManager.loadLastBreed() {
+            breedImageView.image = lastBreed.image
+        } else {
             requestImagem(url : "https://images.dog.ceo/breeds/lhasa/n02098413_6039.jpg")
         }
     }
@@ -149,6 +156,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     guard let imageUrl = data["message"] as? String else {
                         return }
                     
+                    self.breed?.imageurl = imageUrl
+                    
                     self.requestImagem(url: imageUrl)
                 }
                 else{
@@ -162,6 +171,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         Alamofire.request(url).responseImage {response in
             if let image = response.result.value{
                 self.breedImageView.image = image
+                if self.breed != nil {
+                    self.breed?.image = image
+                    BreedDataManager.setLastBreed(breed: self.breed!)
+                }
             } else {
             }
         }
