@@ -20,12 +20,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var breedImageView: UIImageView!
     @IBOutlet weak var breedTableView: UITableView!
     
-    
     var breed: Breed?
     var breeds = [Breed]()
     
     //MARK: Initializer
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,12 +42,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             fetchData()
             requestImagem(url : "https://images.dog.ceo/breeds/lhasa/n02098413_6039.jpg")
         }
-        
-        
     }
     
     //MARK: API request methods
-  
+    
     func fetchData() {
         Alamofire.request("https://dog.ceo/api/breeds/list/all")
             .responseJSON { (response) in
@@ -119,7 +116,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellIdentifier = "dogCell"
-      
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TableViewCell else {
             fatalError("The cell isn't a instance of TableViewCell")
         }
@@ -166,10 +163,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if let image = response.result.value{
                 self.breedImageView.image = image
             } else {
-     }
+            }
+        }
+        
     }
-    
-}
     
     //MARK: Navigation
     
