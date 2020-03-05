@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="hlu-2r-Vaj">
-                                <rect key="frame" x="32" y="52" width="311" height="183"/>
+                                <rect key="frame" x="32" y="96" width="311" height="183"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y76-iE-7nt">
-                                <rect key="frame" x="0.0" y="267" width="375" height="400"/>
+                                <rect key="frame" x="0.0" y="311" width="375" height="356"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dogCell" rowHeight="72" id="ZwD-v5-Bhj" customClass="TableViewCell" customModule="ListaDogsSwift" customModuleProvider="target">
@@ -57,6 +57,7 @@
                                         <connections>
                                             <outlet property="btnFavorito" destination="nX8-OE-cvX" id="6Rv-F1-XZP"/>
                                             <outlet property="nomeDog" destination="Ua6-4Q-xjV" id="Bte-Wi-RWe"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="ShowBreedDetails" id="Tki-xc-fvI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -74,7 +75,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-hachiko-48" landscapeImage="icons8-hachiko-48" largeContentSizeImage="Lista de cachorros" selectedImage="icons8-hachiko-48" id="yJQ-Gm-fMy"/>
+                    <navigationItem key="navigationItem" id="wFA-AM-JNY"/>
                     <connections>
                         <outlet property="breedImageView" destination="hlu-2r-Vaj" id="OdJ-di-lty"/>
                         <outlet property="breedTableView" destination="y76-iE-7nt" id="Ane-74-wgm"/>
@@ -82,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxg-jd-338" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="676" y="68.815592203898049"/>
+            <point key="canvasLocation" x="1586" y="69"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WmU-tf-T0Q">
@@ -95,7 +96,7 @@
                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="pNo-Se-JyN"/>
+                        <segue destination="YBF-eQ-UMy" kind="relationship" relationship="viewControllers" id="pNo-Se-JyN"/>
                         <segue destination="LRP-s5-4h5" kind="relationship" relationship="viewControllers" id="LQu-4l-DxQ"/>
                     </connections>
                 </tabBarController>
@@ -144,6 +145,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWu-gJ-v2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="676" y="866.71664167916049"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J5z-N0-5gg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YBF-eQ-UMy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="icons8-hachiko-48" landscapeImage="icons8-hachiko-48" largeContentSizeImage="Lista de cachorros" selectedImage="icons8-hachiko-48" id="yJQ-Gm-fMy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y9R-7f-RVI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vyG-tA-aqC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="02x-0W-1yM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="68.815592203898049"/>
         </scene>
     </scenes>
     <resources>

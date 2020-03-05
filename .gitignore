@@ -7,3 +7,39 @@ ListaDogsSwift.xcodeproj/project.pbxproj
 Pods/Pods.xcodeproj/project.pbxproj
 ListaDogsSwift.xcodeproj/project.xcworkspace/xcuserdata/jonathan.xcuserdatad/UserInterfaceState.xcuserstate
 ListaDogsSwift.xcodeproj/project.pbxproj
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON.release.xcconfig
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON.modulemap
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON.debug.xcconfig
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON-umbrella.h
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON-dummy.m
+Pods/Target Support Files/AlamofireImage/AlamofireImage.release.xcconfig
+Pods/Target Support Files/AlamofireImage/AlamofireImage.modulemap
+Pods/Target Support Files/AlamofireImage/AlamofireImage.debug.xcconfig
+Pods/Target Support Files/AlamofireImage/AlamofireImage-umbrella.h
+Pods/Target Support Files/AlamofireImage/AlamofireImage-prefix.pch
+Pods/Target Support Files/AlamofireImage/AlamofireImage-Info.plist
+Pods/Target Support Files/AlamofireImage/AlamofireImage-dummy.m
+Pods/SwiftyJSON/Source/SwiftyJSON.swift
+Pods/SwiftyJSON/README.md
+Pods/SwiftyJSON/LICENSE
+Pods/Pods.xcodeproj/xcuserdata/jonathan.xcuserdatad/xcschemes/SwiftyJSON.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/jonathan.xcuserdatad/xcschemes/AlamofireImage.xcscheme
+Pods/AlamofireImage/Source/UIImageView+AlamofireImage.swift
+Pods/AlamofireImage/Source/UIImage+AlamofireImage.swift
+Pods/AlamofireImage/Source/UIButton+AlamofireImage.swift
+Pods/AlamofireImage/Source/Request+AlamofireImage.swift
+Pods/AlamofireImage/Source/ImageFilter.swift
+Pods/AlamofireImage/Source/ImageDownloader.swift
+Pods/AlamofireImage/Source/ImageCache.swift
+Pods/AlamofireImage/Source/Image.swift
+Pods/AlamofireImage/Source/AFIError.swift
+Pods/AlamofireImage/README.md
+Pods/AlamofireImage/LICENSE
+Pods/Target Support Files/Pods-ListaDogsSwift-ListaDogsSwiftUITests/Pods-ListaDogsSwift-ListaDogsSwiftUITests-acknowledgements.markdown
+Pods/Target Support Files/Pods-ListaDogsSwift-ListaDogsSwiftUITests/Pods-ListaDogsSwift-ListaDogsSwiftUITests-frameworks-Debug-output-files.xcfilelist
+Pods/Target Support Files/Pods-ListaDogsSwift-ListaDogsSwiftUITests/Pods-ListaDogsSwift-ListaDogsSwiftUITests-frameworks-Release-output-files.xcfilelist
+Pods/Target Support Files/Pods-ListaDogsSwift/Pods-ListaDogsSwift-acknowledgements.markdown
+Pods/Target Support Files/Pods-ListaDogsSwift/Pods-ListaDogsSwift-frameworks-Debug-output-files.xcfilelist
+Pods/Target Support Files/Pods-ListaDogsSwift/Pods-ListaDogsSwift-frameworks-Release-output-files.xcfilelist

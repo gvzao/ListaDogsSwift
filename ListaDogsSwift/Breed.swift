@@ -52,7 +52,7 @@ class Breed: NSObject, NSCoding {
     var name: String
     var image: UIImage?
     var imageurl: String?
-    var fromBreed: String?
+    var fromBreed: Breed?
     var subBreeds: [Breed]?
     var isFavorite: Bool = false
 

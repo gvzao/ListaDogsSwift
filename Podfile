@@ -8,6 +8,9 @@ target 'ListaDogsSwift' do
 
   # Pods for ListaDogsSwift
    pod 'Alamofire', '4.7'
+   pod 'SwiftyJSON', '4.0'
+   pod 'AlamofireImage', '~>3.3'
+
 
   target 'ListaDogsSwiftTests' do
     inherit! :search_paths
