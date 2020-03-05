@@ -20,24 +20,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var breedImageView: UIImageView!
     @IBOutlet weak var breedTableView: UITableView!
     
-    
     var breed: Breed?
     var breeds = [Breed]()
     
     //MARK: Initializer
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         breedTableView.dataSource = self
         breedTableView.delegate = self
         
-        fetchData()
-        requestImagem(url : "https://images.dog.ceo/breeds/lhasa/n02098413_6039.jpg")
+        if let selectedBreed = breed {
+            fetchImage(breed: selectedBreed)
+            if selectedBreed.subBreeds != nil {
+                if (!selectedBreed.subBreeds!.isEmpty) {
+                    breeds = selectedBreed.subBreeds!
+                }
+            }
+        } else {
+            fetchData()
+            requestImagem(url : "https://images.dog.ceo/breeds/lhasa/n02098413_6039.jpg")
+        }
     }
     
     //MARK: API request methods
-  
+    
     func fetchData() {
         Alamofire.request("https://dog.ceo/api/breeds/list/all")
             .responseJSON { (response) in
@@ -108,7 +116,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellIdentifier = "dogCell"
-      
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TableViewCell else {
             fatalError("The cell isn't a instance of TableViewCell")
         }
@@ -124,11 +132,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func fetchImage(breed: Breed) {
         var url: String;
         
-        if(breed.fromBreed == nil) {
-            url = "https://dog.ceo/api/breed/\(breed.fromBreed!)/\(breed.name)/images/random"
+        if(breed.fromBreed != nil) {
+            url = "https://dog.ceo/api/breed/\(breed.fromBreed!.name)/\(breed.name)/images/random"
         } else {
             url = "https://dog.ceo/api/breed/\(breed.name)/images/random"
         }
+        
+        print("Requesting image url from url: \(url)")
         
         Alamofire.request(url)
             .responseJSON { (response) in
@@ -148,18 +158,41 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func requestImagem(url : String){
-        print("chamou o metodo")
+        print("Requesting image from url: \(url)")
         Alamofire.request(url).responseImage {response in
             if let image = response.result.value{
-                print("chegou")
                 self.breedImageView.image = image
-                print("era para ter ido")
             } else {
-                print("deu merda")
-    
-     }
-    print("fim do metodo")
+            }
+        }
+        
     }
     
-}
+    //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+        case "ShowBreedDetails":
+            guard let viewController = segue.destination as? ViewController else {
+                fatalError("Unexpected destination")
+            }
+            
+            guard let selectedBreedCell = sender as? TableViewCell else {
+                fatalError("Unexpected sender")
+            }
+            
+            guard let indexPath = breedTableView.indexPath(for: selectedBreedCell) else {
+                fatalError("The selected cell is not being displayed on the table")
+            }
+            
+            let selectedBreed = breeds[indexPath.row]
+            
+            viewController.breed = selectedBreed
+            
+        default:
+            fatalError("Unexpected segue identifier: \(segue.identifier!)")
+        }
+    }
 }
