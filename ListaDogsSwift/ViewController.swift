@@ -20,10 +20,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var breedImageView: UIImageView!
     @IBOutlet weak var breedTableView: UITableView!
     
+    @IBAction func favoritoButtonTap(_ sender: UIButton) {
+        
+        isFavoritoGlobal = !isFavoritoGlobal
+        
+        let favoritoImage = isFavoritoGlobal ? UIImage(named: "iconeFavoritoOn") : UIImage(named: "iconeFavorito")
+        
+        sender.setImage(favoritoImage, for: .normal)    }
     
     var breed: String?
     var breeds = [String]()
     
+    var isFavoritoGlobal : Bool = true
     //MARK: Initializer
 
     override func viewDidLoad() {
@@ -109,8 +117,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.nomeDog.text = nomeDog
         
+        let isFavorito = true;
+        isFavoritoGlobal = isFavorito
+        let favoritoImage = isFavorito ? UIImage(named: "iconeFavoritoOn") : UIImage(named: "iconeFavorito")
+        
+        cell.btnFavorito.setImage(favoritoImage, for: .normal)
+        
+        
         return cell
     }
+    
     
     func fetchImage(breed: Breed) {
         var url: String;

@@ -45,6 +45,9 @@
                                                         <constraint firstAttribute="width" secondItem="nX8-OE-cvX" secondAttribute="height" multiplier="1:1" id="gUE-nQ-fjV"/>
                                                     </constraints>
                                                     <state key="normal" image="Icone favorito"/>
+                                                    <connections>
+                                                        <action selector="favoritoButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wOq-bk-F3m"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
