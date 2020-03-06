@@ -17,6 +17,7 @@
 		ABAB967E2409316400954232 /* ListaDogsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB967D2409316400954232 /* ListaDogsSwiftTests.swift */; };
 		ABAB96892409316400954232 /* ListaDogsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB96882409316400954232 /* ListaDogsSwiftUITests.swift */; };
 		ABAB969724093FA800954232 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = ABAB969624093FA800954232 /* Podfile */; };
+		ABB9B21E241271AC00C458DD /* BreedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9B21D241271AC00C458DD /* BreedDataManager.swift */; };
 		ABFDA44D240D3E3300432DE9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFDA44C240D3E3300432DE9 /* TableViewCell.swift */; };
 		ABFDA451240D4C0B00432DE9 /* FavoritoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFDA450240D4C0B00432DE9 /* FavoritoTableViewCell.swift */; };
 		ABFDA455240D505400432DE9 /* FavoritoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFDA454240D505400432DE9 /* FavoritoTableViewController.swift */; };
@@ -62,6 +63,7 @@
 		ABAB96882409316400954232 /* ListaDogsSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDogsSwiftUITests.swift; sourceTree = "<group>"; };
 		ABAB968A2409316400954232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABAB969624093FA800954232 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ABB9B21D241271AC00C458DD /* BreedDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedDataManager.swift; sourceTree = "<group>"; };
 		ABFDA44C240D3E3300432DE9 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		ABFDA450240D4C0B00432DE9 /* FavoritoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritoTableViewCell.swift; sourceTree = "<group>"; };
 		ABFDA454240D505400432DE9 /* FavoritoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritoTableViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		ABAB96672409315F00954232 /* ListaDogsSwift */ = {
 			isa = PBXGroup;
 			children = (
+				ABB9B21D241271AC00C458DD /* BreedDataManager.swift */,
 				AB9E7690240FE8DA0065940F /* Breed.swift */,
 				ABAB96682409315F00954232 /* AppDelegate.swift */,
 				ABAB966A2409315F00954232 /* ViewController.swift */,
@@ -426,6 +429,7 @@
 				ABFDA44D240D3E3300432DE9 /* TableViewCell.swift in Sources */,
 				ABFDA455240D505400432DE9 /* FavoritoTableViewController.swift in Sources */,
 				ABAB96692409315F00954232 /* AppDelegate.swift in Sources */,
+				ABB9B21E241271AC00C458DD /* BreedDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
