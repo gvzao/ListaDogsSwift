@@ -12,10 +12,7 @@ class TableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var nomeDog: UILabel!
-    
     @IBOutlet weak var btnFavorito: UIButton!
-
-  
     
     override func awakeFromNib() {
         super.awakeFromNib()

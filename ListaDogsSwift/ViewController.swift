@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var breedImageView: UIImageView!
     @IBOutlet weak var breedTableView: UITableView!
+    @IBOutlet weak var breedNavigationItem: UINavigationItem!
     
     var breed: Breed?
     var breeds = [Breed]()
@@ -32,6 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         breedTableView.delegate = self
         
         if let selectedBreed = breed {
+            breedNavigationItem.title = selectedBreed.name
             fetchImage(breed: selectedBreed)
             if selectedBreed.subBreeds != nil {
                 if (!selectedBreed.subBreeds!.isEmpty) {
@@ -47,9 +49,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print("Fetched data from API")
             }
             
-            requestImagem(url : "https://images.dog.ceo/breeds/lhasa/n02098413_6039.jpg")
+            breedNavigationItem.title = "Breed list"
+        }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if breed == nil {
+            if let lastBreed = BreedDataManager.loadLastBreed() {
+                breedImageView.image = lastBreed.image
+            } else {
+                requestImagem(url : "https://images.dog.ceo/breeds/lhasa/n02098413_6039.jpg")
+            }
         }
     }
+ 
     
     //MARK: API request methods
     
@@ -185,6 +201,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     guard let imageUrl = data["message"] as? String else {
                         return }
                     
+                    self.breed?.imageurl = imageUrl
+                    
                     self.requestImagem(url: imageUrl)
                 }
                 else{
@@ -198,6 +216,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         Alamofire.request(url).responseImage {response in
             if let image = response.result.value{
                 self.breedImageView.image = image
+                if self.breed != nil {
+                    self.breed?.imageurl = url
+                    self.breed?.image = image
+                    BreedDataManager.setLastBreed(breed: self.breed!)
+                }
             } else {
             }
         }
