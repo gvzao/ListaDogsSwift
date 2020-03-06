@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="hlu-2r-Vaj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="hlu-2r-Vaj">
                                 <rect key="frame" x="32" y="96" width="311" height="183"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y76-iE-7nt">
@@ -77,8 +77,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="wFA-AM-JNY"/>
                     <connections>
-                        <outlet property="breedImageView" destination="hlu-2r-Vaj" id="OdJ-di-lty"/>
-                        <outlet property="breedTableView" destination="y76-iE-7nt" id="Ane-74-wgm"/>
+                        <outlet property="breedImageView" destination="hlu-2r-Vaj" id="SWk-X3-NZb"/>
+                        <outlet property="breedNavigationItem" destination="wFA-AM-JNY" id="6VC-2W-Id7"/>
+                        <outlet property="breedTableView" destination="y76-iE-7nt" id="K2R-g0-pnn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxg-jd-338" userLabel="First Responder" sceneMemberID="firstResponder"/>
