@@ -78,7 +78,7 @@ class Breed: NSObject, NSCoding {
         let fromBreed = aDecoder.decodeObject(forKey: PropertyKey.fromBreed) as? Breed
         
         let subBreeds = aDecoder.decodeObject(forKey: PropertyKey.subBreeds) as? [Breed]
-        
+   
         let isFavorite = aDecoder.decodeBool(forKey: PropertyKey.isFavorite)
         
         self.init(name: name, image: image, imageUrl: imageurl, fromBreed: fromBreed, subBreeds: subBreeds, isFavorite: isFavorite)
