@@ -41,8 +41,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
             }
         } else {
+            if let breedList = BreedDataManager.loadBreeds() {
+                breeds = breedList
+                print("Loaded breeds from file")
+            } else {
+                fetchData()
+                print("Fetched data from API")
+            }
+            
             breedNavigationItem.title = "Breed list"
-            fetchData()
         }
         
     }
@@ -140,9 +147,38 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let breed = breeds[indexPath.row]
         
         cell.nomeDog.text = breed.name
+        
+        let imgOff = UIImage(named: "iconeFavoritoOff")
+        let imgOn = UIImage(named: "iconeFavoritoOn")
+            
+        cell.btnFavorito.setImage(imgOff, for: .normal)
+        cell.btnFavorito.setImage(imgOn, for: .selected)
+        cell.btnFavorito.setImage(imgOn, for: .highlighted)
+    
         cell.btnFavorito.isSelected = breed.isFavorite
         
+        cell.btnFavorito.tag = indexPath.row
+        cell.btnFavorito.addTarget(self, action: #selector(favoritoTapped(button:)), for: .touchUpInside)
+        
         return cell
+    }
+    
+    @objc func favoritoTapped(button : UIButton){
+        let favoritedBreed = breeds[button.tag]
+        
+        favoritedBreed.isFavorite = !favoritedBreed.isFavorite
+        
+        button.isSelected = favoritedBreed.isFavorite
+        
+        breeds[button.tag] = favoritedBreed
+        
+        if(self.breed == nil) {
+            BreedDataManager.saveDogs(breeds: breeds)
+            let vargas = breeds
+            print(vargas)
+        }
+        
+        print(button.tag)
     }
     
     func fetchImage(breed: Breed) {

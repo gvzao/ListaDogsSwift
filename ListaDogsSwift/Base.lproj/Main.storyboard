@@ -44,7 +44,7 @@
                                                         <constraint firstAttribute="width" constant="40" id="MSa-nw-gXW"/>
                                                         <constraint firstAttribute="width" secondItem="nX8-OE-cvX" secondAttribute="height" multiplier="1:1" id="gUE-nQ-fjV"/>
                                                     </constraints>
-                                                    <state key="normal" image="Icone favorito"/>
+                                                    <state key="normal" image="iconeFavoritoOff"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -168,9 +168,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icone favorito" width="64" height="64"/>
         <image name="Image" width="275" height="183"/>
         <image name="Lista de cachorros" width="16" height="16"/>
+        <image name="iconeFavoritoOff" width="64" height="64"/>
         <image name="icons8-adicionar-aos-favoritos-64" width="64" height="64"/>
         <image name="icons8-hachiko-48" width="48" height="48"/>
     </resources>
