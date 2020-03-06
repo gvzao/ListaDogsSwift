@@ -174,8 +174,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if(self.breed == nil) {
             BreedDataManager.saveDogs(breeds: breeds)
-            let vargas = breeds
-            print(vargas)
         }
         
         print(button.tag)

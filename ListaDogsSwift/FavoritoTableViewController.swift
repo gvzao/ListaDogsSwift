@@ -8,17 +8,32 @@
 
 import UIKit
 
-class FavoritoTableViewController: UITableViewController {
-
+class FavoritoTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var breed : Breed
+    var favorito = [Breed]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    private func favorite() {
+        for breed in favorito {
+            let dogs = Breed(name: breed.name, image: breed.image, imageUrl: breed.imageurl, fromBreed: breed.fromBreed, subBreeds: <#T##[Breed]?#>, isFavorite: <#T##Bool#>);
+            
+            
+            
+        
+            
+            
+            
+        }
     }
     
     //MARK: Override func
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0 //favorito.count
+        return favorito.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -29,10 +44,10 @@ class FavoritoTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FavoritoTableViewCell
         
         //Pegando a posição na tabela, para cetar as informações na celula de cada bar.
-        //let dog = favorito[indexPath.row]
+        let dog = favorito[indexPath.row]
         
-       // cell?.NomeDog.text = raca.nome
-       // cell?.FtDog.image = raca.foto
+        cell?.nome.text = dog.name
+        cell?.ftDog.image = dog.image
         
         return cell!
     }
